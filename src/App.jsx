@@ -1,16 +1,31 @@
-import { Routes, Route, Link, BrowserRouter } from 'react-router';
+import { Routes, Route, Link, BrowserRouter } from 'react-router-dom';
 import './App.css';
 import About from './components/About';
 import Cart from './components/Cart';
 import Products from './components/Products';
+import Home from './components/home';
+import { GoSun } from "react-icons/go";
+import { MdOutlineShoppingCart } from "react-icons/md";
+import Singin from './components/singIn';
 function App() {
-  
+
 
   return (
-    <>
-     <BrowserRouter>
-     <header className="header-container">
-        <nav className='navbar-container'>
+    <div className='container'>
+      <BrowserRouter>
+        <header className="header-container">
+          <div className="Login">
+            <ul>
+              <li>
+              <Link to='/login'>Sign in / Guest</Link>
+              </li>
+              <li>
+                <Link></Link>
+              </li>
+            </ul>
+          </div>
+          <nav className='navbar-container'>
+            <span>C</span>
             <ul>
               <li>
                 <Link to='/'>Home</Link>
@@ -25,29 +40,34 @@ function App() {
                 <Link to='/cart'>Cart</Link>
               </li>
             </ul>
-        </nav>
-      </header>
-      <main className="main-container">
-        <div className="hero-container">
-          <div className="title-container">
+            <div className="icon-container">
+              <GoSun className='icon' />
+              <MdOutlineShoppingCart className='icon' />
+            </div>
+          </nav>
+        </header>
+        {/* <main className="main-container">
+          <div className="hero-container">
+            <div className="title-container">
 
-          </div>
-          <div className="picture-container">
+            </div>
+            <div className="picture-container">
 
+            </div>
           </div>
-        </div>
-        <div className="card-container">
-          
-        </div>
-      </main>
-      <Routes>
-        <Route path='/' element = { <Home />} />
-        <Route path='/about' element = { <About />} />
-        <Route path='/products' element = { <Products />} />
-        <Route path='/cart' element = { <Cart />} />
-      </Routes>
-     </BrowserRouter>
-    </>
+          <div className="card-container"> */}
+
+          {/* </div>
+        </main> */}
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/products' element={<Products />} />
+          <Route path='/cart' element={<Cart />} />
+          <Route path='/login' element={<Singin />}/>
+        </Routes>
+      </BrowserRouter>
+    </div>
   )
 }
 

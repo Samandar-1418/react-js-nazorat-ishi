@@ -1,0 +1,33 @@
+.hero-container {
+    display: flex ;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px;
+    width: 100vw;
+}
+.text-container {
+    display: flex;
+    /* align-items: center; */
+    gap: 50px;
+    flex-direction: column;
+    width: 50%;
+    justify-content: space-between;
+}
+h1 {
+    color:white;
+    font-size: 72px;
+}
+p {
+    color:white;
+    font-size: 24px;
+    line-height: 40px;
+
+}
+button {
+    padding: 20px ;
+    background: #FF7AC6;
+    border: none;
+    border-radius: 15px;
+    font-weight: 700;
+    width: 150px;
+}

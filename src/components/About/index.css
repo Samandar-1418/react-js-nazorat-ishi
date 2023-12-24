@@ -1,0 +1,28 @@
+.about-wrapper {
+    width: 100%;
+   width: 800px;
+   margin: 100px auto;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+}
+.aboutTitle-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+.aboutTitle-wrapper span {
+    padding: 20px 30px;
+    font-size: 32px;
+    background: #FF7AC6;
+    border: none;
+     border-radius: 15px;
+     font-weight: 700;
+     width: 170px;
+     letter-spacing: 2px;
+}
+.about-wrapper p {
+    font-size: 21.px;
+    line-height: 40px;
+}
