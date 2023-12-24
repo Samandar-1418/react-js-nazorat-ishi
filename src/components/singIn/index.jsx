@@ -20,7 +20,7 @@ export default function Singin() {
         <input type="password" id="password" /><br />
         <input className='btnLogin' type="button" value="LOGIN" /><br />
         <input className='btnAcc' type="button" value="GUEST USER" /><br />
-        <span>Not a member yet? <Link to='/login'>salom</Link></span>
+        <span>Not a member yet? <Link to='/login'>Register</Link></span>
 
         <div>
           <Routes>
