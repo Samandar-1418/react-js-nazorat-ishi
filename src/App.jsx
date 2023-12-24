@@ -7,6 +7,7 @@ import Home from './components/home';
 import { GoSun } from "react-icons/go";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import Singin from './components/singIn';
+import CreateAcc from './components/About/createAccaunt';
 function App() {
 
 
@@ -20,7 +21,7 @@ function App() {
               <Link to='/login'>Sign in / Guest</Link>
               </li>
               <li>
-                <Link></Link>
+                <Link to='/singin'>Create Accaunt</Link>
               </li>
             </ul>
           </div>
@@ -65,6 +66,7 @@ function App() {
           <Route path='/products' element={<Products />} />
           <Route path='/cart' element={<Cart />} />
           <Route path='/login' element={<Singin />}/>
+          <Route path='/singin' element={<CreateAcc />}/>
         </Routes>
       </BrowserRouter>
     </div>
