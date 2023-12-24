@@ -27,8 +27,15 @@ input {
     background-color: #BF95F9;
          border:none;
 }
-span {
+.input-container span {
     color: #F8F8F2;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+}
+.input-container span a {
+    color: #FF7AC6;
 }
 label p{
     font-size: 16px;
