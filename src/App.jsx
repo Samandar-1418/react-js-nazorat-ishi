@@ -7,8 +7,34 @@ import Home from './components/home';
 import { GoSun } from "react-icons/go";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import Singin from './components/singIn';
-import CreateAcc from './components/About/createAccaunt';
+import CreateAcc from './components/createAccaunt';
+import { useEffect, useState } from 'react';
+import { FaRegMoon } from "react-icons/fa";
 function App() {
+ useEffect(()=>{
+  document.querySelector('body').setAttribute('data-theme', ('ligth'))
+ }, [])
+
+ function setDataMode (){
+  document.querySelector('body').setAttribute('data-theme', 'dark')
+ }
+ function setLightMode (){
+  document.querySelector('body').setAttribute('data-theme', ('ligth'))
+ }
+ function onchangeMode() {
+  let moonElement = document.getElementById("Moon");
+  let sunElement = document.getElementById("Sun");
+
+  if (moonElement.style.display === "none") {
+      moonElement.style.display = "block";
+      sunElement.style.display = "none";
+      setDataMode();
+  } else {
+      moonElement.style.display = "none";
+      sunElement.style.display = "block";
+      setLightMode();
+  }
+}
 
 
   return (
@@ -42,24 +68,12 @@ function App() {
               </li>
             </ul>
             <div className="icon-container">
-              <GoSun className='icon' />
+              <GoSun className='icon' id='Sun'  onClick={onchangeMode} />
+              <FaRegMoon className='icon' onClick={onchangeMode} id='Moon' />
               <MdOutlineShoppingCart className='icon' />
             </div>
           </nav>
         </header>
-        {/* <main className="main-container">
-          <div className="hero-container">
-            <div className="title-container">
-
-            </div>
-            <div className="picture-container">
-
-            </div>
-          </div>
-          <div className="card-container"> */}
-
-          {/* </div>
-        </main> */}
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />

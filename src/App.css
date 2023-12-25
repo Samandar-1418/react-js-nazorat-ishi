@@ -3,6 +3,14 @@
     padding: 0;
     box-sizing: border-box;
 }
+[data-theme ='ligth']{
+    --bg-color: white;
+    --text-color:#414558;
+    --header-bg-color:#181920;
+    --navbar-bg-color:#F0F6FF;
+    --logo-bg-color:#057AFF;
+    
+ }
 body {
     font-family: sans-serif;
     font-size: 16px;
@@ -28,7 +36,7 @@ body {
 }
 ul li {
     list-style: none;
-    padding: 10px 14px;
+    padding: 10px ;
 
 }
 ul {
@@ -42,11 +50,12 @@ a {
 }
 .header-container span {
     width: 50px;
-    background-color: #FF7AC6;
+    background-color: var(--logo-bg-color);
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
     font-size: 24px;
+    color: var(--bg-color);
 }
 .header-container p {
     margin-bottom: 5px;
@@ -78,3 +87,27 @@ li:hover {
 .Login a:hover{
  text-decoration:underline;
 }
+
+ body {
+    background-color:white;
+ }
+ .header-container {
+    background-color: var(--header-bg-color);
+ }
+
+ .navbar-container {
+    background: var(--navbar-bg-color);
+    color:var(--text-color)
+ }
+ .header-container a  {
+   color: var(--bg-color);
+ }
+ .navbar-container a, .icon {
+    color: var(--text-color);
+ }
+ li:hover{
+    color: var(--bg-color);
+ }
+ a:hover{
+    color:var(--bg-color)
+ } 
