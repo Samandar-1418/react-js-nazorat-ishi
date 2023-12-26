@@ -4,6 +4,9 @@
     --logo-bg-color:#057AFF;
     
  }
+[data-theme ='dark']{
+    --logo-bg-color:#FF7AC6;
+}
 .about-wrapper {
     width: 100%;
    width: 800px;
