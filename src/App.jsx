@@ -1,4 +1,4 @@
-import { Routes, Route, Link, BrowserRouter } from 'react-router-dom';
+import { Routes, Route, Link, BrowserRouter, useLocation } from 'react-router-dom';
 import './App.css';
 import About from './components/About';
 import Cart from './components/Cart';
@@ -8,9 +8,10 @@ import { GoSun } from "react-icons/go";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import Singin from './components/singIn';
 import CreateAcc from './components/createAccaunt';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { FaRegMoon } from "react-icons/fa";
 function App() {
+  
  useEffect(()=>{
   document.querySelector('body').setAttribute('data-theme', ('ligth'))
  }, [])
